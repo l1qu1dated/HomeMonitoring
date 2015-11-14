@@ -1,66 +1,81 @@
 package com.example.igornaperkovskiy.dps924lab2;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by igornaperkovskiy on 2015-11-11.
+ */
+public class CameraActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_camera);
 
 
-        LocksData ld = new LocksData();
-        LightsData ls = new LightsData();
-        ThermostateData td = new ThermostateData();
+        Button front = (Button)findViewById(R.id.front);
+        Button bedroom = (Button)findViewById(R.id.bedroom);
+        Button back = (Button)findViewById(R.id.back);
+        Button basement = (Button)findViewById(R.id.basement);
+        Button kitchen = (Button)findViewById(R.id.kitchen);
+        Button living = (Button)findViewById(R.id.living);
 
-        Button locks = (Button)findViewById(R.id.door_locks);
-        Button lights = (Button)findViewById(R.id.lights);
-        Button cameras = (Button)findViewById(R.id.camera);
-        Button thermostat = (Button)findViewById(R.id.thermostats);
-
-        locks.setText("Door Locks: " + ld.getCount() + " unlocked");
-        lights.setText("Lights: " + ls.countLights() + " on");
-        thermostat.setText("Thermostats: " + td.getCount() + " on");
-
-        locks.setOnClickListener(new View.OnClickListener() {
+        front.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(), LocksActivity.class);
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
                 startActivity(i);
             }
         });
 
-        cameras.setOnClickListener(new View.OnClickListener() {
+        bedroom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(), CameraActivity.class);
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
                 startActivity(i);
             }
         });
 
-        thermostat.setOnClickListener(new View.OnClickListener() {
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(), ThermostateActivity.class);
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
                 startActivity(i);
             }
         });
 
-        lights.setOnClickListener(new View.OnClickListener() {
+        basement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent i = new Intent(getApplicationContext(), LightsActivity.class);
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
+                startActivity(i);
+            }
+        });
+
+        kitchen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
+                startActivity(i);
+            }
+        });
+
+        living.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(), CameraView.class);
                 startActivity(i);
             }
         });
@@ -98,4 +113,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

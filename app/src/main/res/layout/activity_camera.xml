@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Front Door Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/front"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Bedroom Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/bedroom"
+        android:layout_below="@+id/front"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Back Door Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/back"
+        android:layout_below="@+id/bedroom"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Basement Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/basement"
+        android:layout_below="@+id/back"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Kitchen Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/kitchen"
+        android:layout_below="@+id/basement"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon2"
+        android:gravity="left|center_vertical"
+        android:text="Living Room Camera"
+        android:layout_alignParentEnd="true"
+        android:height="300px"
+        android:id="@+id/living"
+        android:layout_below="@+id/kitchen"
+        />
+
+</RelativeLayout>
+</ScrollView>

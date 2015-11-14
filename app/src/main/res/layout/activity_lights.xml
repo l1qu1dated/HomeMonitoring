@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="horizontal">
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Front Door Light"
+        android:id="@+id/front"
+        android:layout_marginLeft="2sp"
+        android:layout_marginRight="5sp"
+        android:backgroundTint="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:checked="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back Door Light"
+        android:id="@+id/back"
+        android:layout_below="@+id/front"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Living Room Light 1"
+        android:id="@+id/lv1"
+        android:layout_below="@+id/back"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="false"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Living Room Light 2"
+        android:id="@+id/lv2"
+        android:layout_below="@+id/lv1"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kitchen Light"
+        android:id="@+id/kitchen"
+        android:layout_below="@+id/lv2"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="false"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hallway Light"
+        android:id="@+id/hallway"
+        android:layout_below="@+id/kitchen"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="false"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bedroom 1 Light"
+        android:id="@+id/bd1"
+        android:layout_below="@+id/hallway"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bedroom 2 Light"
+        android:id="@+id/bd2"
+        android:layout_below="@+id/bd1"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="true"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basement Light"
+        android:id="@+id/basement"
+        android:layout_below="@+id/bd2"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/front"
+        android:checked="false"/>
+
+</RelativeLayout>

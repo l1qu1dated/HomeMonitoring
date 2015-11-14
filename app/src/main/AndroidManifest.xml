@@ -16,6 +16,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/action_report"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".LocksActivity"
+            android:label="@string/door_locks"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CameraActivity"
+            android:label="@string/cameras"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+        
+        <activity android:name=".CameraView"
+            android:label="@string/cameras"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.CameraActivity"
+            android:configChanges = "orientation"
+            android:screenOrientation = "landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+
+        <activity android:name=".ThermostateActivity"
+            android:label="@string/thermostats"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+
+        <activity android:name=".LightsActivity"
+            android:label="@string/lights"
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>
