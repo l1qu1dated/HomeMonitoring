@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 /**
  * Created by igornaperkovskiy on 2015-11-13.
@@ -21,7 +22,9 @@ import android.widget.Spinner;
 public class ThermostateActivity extends AppCompatActivity {
 
     private ThermostateData td = new ThermostateData();
-
+    private static int mainVal = 21;
+    private static int livingVal = 23;
+    private static int kitchenVal = 21;
 
 
     @Override
@@ -53,26 +56,20 @@ public class ThermostateActivity extends AppCompatActivity {
         else{
             kitchen.setText("Kitchen: " + td.getKitchen() + "\u2103");
         }
-        /*NumberPicker np;
-        np = (NumberPicker) this.findViewById(R.id.number_picker);
-        np.setMinValue(1);
-        np.setMaxValue(31);
-        np.setWrapSelectorWheel(false);*/
-
 
         main.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //registerForContextMenu(findViewById(R.id.mainBedroom));
-                //openContextMenu(findViewById(R.id.mainBedroom));
-                //AlertDialog.Builder builder = new AlertDialog.Builder(ThermostateActivity.this,AlertDialog.THEME_HOLO_LIGHT);
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(ThermostateActivity.this, AlertDialog.THEME_HOLO_LIGHT);
 
-
-
-
-                if (td.getMainOn() == true){
+                if (td.getMainOn() == true) {
+                    //inflate layout
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
-                    builder.setTitle("Turn Off?");
+
+                    //set title
+                    builder.setTitle("Set Temperature:");
+
+                    //Off button
                     builder.setNeutralButton("Off", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
@@ -81,11 +78,30 @@ public class ThermostateActivity extends AppCompatActivity {
                             startActivity(getIntent());
                         }
                     });
+
+                    //create number picker view
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    //initialise number picker
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getMain());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            mainVal = newVal;
+                        }
+                    });
+
+                    //Cancel and OK buttons
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            td.setMain(21);
+                            td.setMain(mainVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -96,18 +112,32 @@ public class ThermostateActivity extends AppCompatActivity {
                                 }
                             });
                     builder.show();
-                    }
-                else{
+                } else {
 
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
 
                     builder.setTitle("Turn On?");
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getMain());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            mainVal = newVal;
+                        }
+                    });
+
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             td.setMainOn(true);
-                            td.setMain(21);
+                            td.setMain(mainVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -122,15 +152,16 @@ public class ThermostateActivity extends AppCompatActivity {
                 }
             }
         });
-
+/**********************************************************************************************/
         living.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //registerForContextMenu(findViewById(R.id.livingRoom));
-                //openContextMenu(findViewById(R.id.livingRoom));
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(ThermostateActivity.this, AlertDialog.THEME_HOLO_LIGHT);
-                if(td.getLivingOn() == true){
+                if (td.getLivingOn() == true) {
+
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
-                    builder.setTitle("Turn Off?");
+                    builder.setTitle("Set Temperature:");
+
                     builder.setNeutralButton("Off", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
@@ -139,11 +170,27 @@ public class ThermostateActivity extends AppCompatActivity {
                             startActivity(getIntent());
                         }
                     });
+
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getLiving());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            livingVal = newVal;
+                        }
+                    });
+
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            td.setLiving(23);
+                            td.setLiving(livingVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -154,17 +201,31 @@ public class ThermostateActivity extends AppCompatActivity {
                                 }
                             });
                     builder.show();
-                }
-                else{
+                } else {
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
 
                     builder.setTitle("Turn On?");
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getLiving());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            livingVal = newVal;
+                        }
+                    });
+
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             td.setLivingOn(true);
-                            td.setLiving(23);
+                            td.setLiving(livingVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -179,13 +240,16 @@ public class ThermostateActivity extends AppCompatActivity {
 
             }
         });
-
+/**********************************************************************************************/
         kitchen.setOnClickListener(new View.OnClickListener() {
-            AlertDialog.Builder builder = new AlertDialog.Builder(ThermostateActivity.this, AlertDialog.THEME_HOLO_LIGHT);
             public void onClick(View v) {
-                if(td.getKitchenOn() == true){
+                AlertDialog.Builder builder = new AlertDialog.Builder(ThermostateActivity.this, AlertDialog.THEME_HOLO_LIGHT);
+
+                if (td.getKitchenOn() == true) {
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
-                    builder.setTitle("Turn Off?");
+                    builder.setTitle("Set Temperature:");
+
+
                     builder.setNeutralButton("Off", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
@@ -194,11 +258,27 @@ public class ThermostateActivity extends AppCompatActivity {
                             startActivity(getIntent());
                         }
                     });
+
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getKitchen());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            kitchenVal = newVal;
+                        }
+                    });
+
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            td.setKitchen(21);
+                            td.setKitchen(kitchenVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -209,17 +289,30 @@ public class ThermostateActivity extends AppCompatActivity {
                                 }
                             });
                     builder.show();
-                }
-                else{
+                } else {
                     LayoutInflater inflater = ThermostateActivity.this.getLayoutInflater();
-
                     builder.setTitle("Turn On?");
                     builder.setView(inflater.inflate(R.layout.spinner, null));
+
+                    NumberPicker np = new NumberPicker(ThermostateActivity.this);
+                    builder.setView(np);
+                    np.setMinValue(14);
+                    np.setMaxValue(30);
+                    np.setValue(td.getKitchen());
+                    np.setWrapSelectorWheel(true);
+                    np.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+
+                        @Override
+                        public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                            kitchenVal = newVal;
+                        }
+                    });
+
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             td.setKitchenOn(true);
-                            td.setKitchen(21);
+                            td.setKitchen(kitchenVal);
                             finish();
                             startActivity(getIntent());
                         }
@@ -233,15 +326,6 @@ public class ThermostateActivity extends AppCompatActivity {
                 }
             }
         });
-
-    }
-
-    @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle("Turn on?");
-        menu.add(menu.FIRST, v.getId(), 1, "Cancel");
-        menu.add(menu.FIRST, v.getId(), 2, "OK");
 
     }
 }
