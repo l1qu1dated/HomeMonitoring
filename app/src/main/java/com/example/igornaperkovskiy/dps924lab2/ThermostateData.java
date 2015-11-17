@@ -36,7 +36,7 @@ public class ThermostateData {
         list[2] = kitchenOn;
 
         for (int i = 0; i < 3; i++){
-            if (list[i] == false){
+            if (list[i] == true){
                 count++;
             }
         }

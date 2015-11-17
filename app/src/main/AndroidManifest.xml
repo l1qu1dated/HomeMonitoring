@@ -53,7 +53,8 @@
 
         <activity android:name=".ThermostateActivity"
             android:label="@string/thermostats"
-            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity" >
+            android:parentActivityName="com.example.igornaperkovskiy.dps924lab2.MainActivity"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
@@ -66,6 +67,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.igornaperkovskiy.dps924lab2.MainActivity" />
         </activity>
+
+
 
     </application>
 
