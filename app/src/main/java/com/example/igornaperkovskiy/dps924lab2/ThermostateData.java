@@ -6,7 +6,7 @@ package com.example.igornaperkovskiy.dps924lab2;
 public class ThermostateData {
 
     static int main = 21;
-    static int living = 21;
+    static int living = 23;
     static int kitchen = 21;
     static Boolean mainOn = true;
     static Boolean livingOn = true;

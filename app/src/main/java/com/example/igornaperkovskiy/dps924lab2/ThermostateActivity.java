@@ -85,7 +85,9 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setMain(21);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -104,7 +106,10 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setMainOn(true);
+                            td.setMain(21);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -138,7 +143,9 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setLiving(23);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -156,7 +163,10 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setLivingOn(true);
+                            td.setLiving(23);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -188,7 +198,9 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setKitchen(21);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -206,7 +218,10 @@ public class ThermostateActivity extends AppCompatActivity {
                     builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-
+                            td.setKitchenOn(true);
+                            td.setKitchen(21);
+                            finish();
+                            startActivity(getIntent());
                         }
                     })
                             .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
