@@ -18,7 +18,7 @@ public class CameraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
 
-
+        //Initialise buttons
         Button front = (Button)findViewById(R.id.front);
         Button bedroom = (Button)findViewById(R.id.bedroom);
         Button back = (Button)findViewById(R.id.back);
@@ -26,6 +26,7 @@ public class CameraActivity extends AppCompatActivity {
         Button kitchen = (Button)findViewById(R.id.kitchen);
         Button living = (Button)findViewById(R.id.living);
 
+        //Action on click
         front.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

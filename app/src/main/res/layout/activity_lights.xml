@@ -9,12 +9,21 @@
         android:layout_height="wrap_content"
         android:text="Front Door Light"
         android:id="@+id/front"
-        android:layout_marginLeft="2sp"
-        android:layout_marginRight="5sp"
         android:backgroundTint="#ffffff"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentTop="false"
         android:layout_alignParentStart="true"
-        android:checked="true" />
+        android:checked="true"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentEnd="true" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -24,7 +33,17 @@
         android:layout_below="@+id/front"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="true"/>
+        android:checked="true"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -34,7 +53,17 @@
         android:layout_below="@+id/back"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="false"/>
+        android:checked="false"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -44,7 +73,17 @@
         android:layout_below="@+id/lv1"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="true"/>
+        android:checked="true"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -54,7 +93,17 @@
         android:layout_below="@+id/lv2"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="false"/>
+        android:checked="false"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -64,7 +113,17 @@
         android:layout_below="@+id/kitchen"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="false"/>
+        android:checked="false"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -74,7 +133,17 @@
         android:layout_below="@+id/hallway"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="true"/>
+        android:checked="true"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -84,7 +153,17 @@
         android:layout_below="@+id/bd1"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="true"/>
+        android:checked="true"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -94,6 +173,15 @@
         android:layout_below="@+id/bd2"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/front"
-        android:checked="false"/>
-
+        android:checked="false"
+        android:background="#ffffff"
+        android:paddingLeft="120dp"
+        android:paddingTop="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:splitTrack="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp" />
 </RelativeLayout>

@@ -43,5 +43,18 @@ public class ThermostateData {
         return count;
     }
 
+    public void setOn(Boolean on){
+        if(on == true){
+            mainOn = false;
+            livingOn = false;
+            kitchenOn = false;
+        }
+        else{
+            mainOn = true;
+            livingOn = true;
+            kitchenOn = true;
+        }
+    }
+
 
 }

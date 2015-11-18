@@ -54,4 +54,5 @@ public class LocksData {
     public void setLiving(Boolean l) { living = l; }
     public void setKitchen(Boolean k) { kitchen = k; }
     public void setBasement(Boolean b) { basement = b; }
+
 }
